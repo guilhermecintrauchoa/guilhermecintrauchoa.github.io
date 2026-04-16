@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>$title$</title>
+
+    $math$
+
+    <style>
+      #menu ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        text-align: center;
+        font-size: 18px;
+      }
+      #menu li{
+        display: inline;
+      }
+      body {
+        max-width:960px;
+        margin:0 auto;
+      }
+      p {
+        font-size: 18px;
+      }
+      .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      div.text-box {
+        padding: 8px;
+        border: 2px solid black;
+        margin: 5;
+      }
+      .footer {
+        position: fixed;
+        bottom: 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1 style="text-align:center;">Blog | Guilherme Cintra</h1>
+      <div id="menu">
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li>|</li>
+          <li><a href="/blog.html">Blog</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <p>Last Edited: $date$</p>
+
+    <h1>$title$</h1>
+
+    $if(toc)$
+    <nav id="TOC" role="doc-toc">
+      <h2>Table of contents</h2>
+      $toc$
+    </nav>
+    <hr>
+    $endif$
+
+    $body$
+
+  </body>
+</html>
